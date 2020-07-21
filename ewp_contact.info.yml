@@ -1,0 +1,8 @@
+name: 'EWP Contact'
+type: module
+description: 'EWP Abstract Contact, Phone Number and Flexible Address types'
+core: 8.x
+package: 'EWP'
+dependencies:
+  - drupal:telephone
+  - ewp_core:ewp_core

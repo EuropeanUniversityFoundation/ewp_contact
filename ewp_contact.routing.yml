@@ -1,0 +1,7 @@
+ewp_contact.admin:
+  path: '/admin/ewp/contact'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'EWP Contact'
+  requirements:
+    _permission: 'administer contact entities'

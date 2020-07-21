@@ -1,0 +1,21 @@
+# EWP Contact menu items definition
+ewp_contact.admin:
+  title: 'EWP Contact Type'
+  route_name: ewp_contact.admin
+  description: 'Erasmus Without Paper specifications for Abstract Contacts.'
+  parent: ewp_core.admin
+
+# Contact menu items definition
+contact.admin.structure.settings:
+  title: 'Contact settings'
+  description: 'Configure Contact entities'
+  route_name: contact.settings
+  parent: ewp_contact.admin
+  weight: 1
+
+entity.contact.collection:
+  title: 'Contact list'
+  route_name: entity.contact.collection
+  description: 'List Contact entities'
+  parent: ewp_contact.admin
+  weight: 2

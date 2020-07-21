@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Contains ewp_contact.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function ewp_contact_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the ewp_contact module.
+    case 'help.page.ewp_contact':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Drupal implementation of the EWP Abstract Contact Type') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function ewp_contact_theme() {
+  return [
+    'ewp_contact' => [
+      'render element' => 'children',
+    ],
+  ];
+}

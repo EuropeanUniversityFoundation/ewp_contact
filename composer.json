@@ -1,0 +1,22 @@
+{
+  "name": "ewp_contact",
+  "type": "drupal-module",
+  "description": "Drupal implementation of the EWP Abstract Contact Type",
+  "keywords": [
+  ],
+  "homepage": "",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "",
+    "source": ""
+  },
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/EuropeanUniversityFoundation/ewp_core"
+    }
+  ],
+  "require": {
+    "euf/ewp_core": "dev-master"
+  }
+}
