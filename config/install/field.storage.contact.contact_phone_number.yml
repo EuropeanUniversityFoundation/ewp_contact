@@ -1,0 +1,17 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - ewp_contact
+id: contact.contact_phone_number
+field_name: contact_phone_number
+entity_type: contact
+type: ewp_phone_number
+settings: {  }
+module: ewp_contact
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

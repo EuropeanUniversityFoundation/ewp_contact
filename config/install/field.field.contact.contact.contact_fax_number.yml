@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.contact.contact_fax_number
+  module:
+    - ewp_contact
+id: contact.contact.contact_fax_number
+field_name: contact_fax_number
+entity_type: contact
+bundle: contact
+label: 'Fax number'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: ewp_phone_number

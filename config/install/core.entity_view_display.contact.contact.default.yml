@@ -1,0 +1,102 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.contact.contact.contact_name
+    - field.field.contact.contact.contact_email
+    - field.field.contact.contact.contact_fax_number
+    - field.field.contact.contact.contact_mailing_address
+    - field.field.contact.contact.contact_person_family_name
+    - field.field.contact.contact.contact_person_gender
+    - field.field.contact.contact.contact_person_given_names
+    - field.field.contact.contact.contact_phone_number
+    - field.field.contact.contact.contact_role_description
+    - field.field.contact.contact.contact_street_address
+  module:
+    - ewp_contact
+    - ewp_core
+id: contact.contact.default
+targetEntityType: contact
+bundle: contact
+mode: default
+content:
+  contact_name:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: ewp_string_lang_default
+    region: content
+  contact_email:
+    weight: 7
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  contact_fax_number:
+    weight: 6
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: ewp_phone_number_default
+    region: content
+  contact_mailing_address:
+    weight: 9
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: ewp_flexible_address_default
+    region: content
+  contact_person_family_name:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: ewp_string_lang_default
+    region: content
+  contact_person_gender:
+    weight: 4
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    type: gender_code_default
+    region: content
+  contact_person_given_names:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: ewp_string_lang_default
+    region: content
+  contact_phone_number:
+    weight: 5
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: ewp_phone_number_default
+    region: content
+  contact_role_description:
+    weight: 10
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: ewp_multiline_lang_default
+    region: content
+  contact_street_address:
+    weight: 8
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: ewp_flexible_address_default
+    region: content
+  name:
+    label: hidden
+    type: string
+    weight: 0
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  langcode: true

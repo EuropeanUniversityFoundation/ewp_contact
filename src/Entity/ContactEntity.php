@@ -33,6 +33,7 @@ use Drupal\Core\Entity\EntityTypeInterface;
  *     "access" = "Drupal\ewp_contact\ContactEntityAccessControlHandler",
  *   },
  *   base_table = "contact",
+ *   data_table = "contact_field_data",
  *   translatable = FALSE,
  *   admin_permission = "administer contact entities",
  *   entity_keys = {
@@ -43,10 +44,10 @@ use Drupal\Core\Entity\EntityTypeInterface;
  *     "published" = "status",
  *   },
  *   links = {
- *     "canonical" = "/admin/ewp/contact/{contact}",
- *     "add-form" = "/admin/ewp/contact/add",
- *     "edit-form" = "/admin/ewp/contact/{contact}/edit",
- *     "delete-form" = "/admin/ewp/contact/{contact}/delete",
+ *     "canonical" = "/ewp/contact/{contact}",
+ *     "add-form" = "/ewp/contact/add",
+ *     "edit-form" = "/ewp/contact/{contact}/edit",
+ *     "delete-form" = "/ewp/contact/{contact}/delete",
  *     "collection" = "/admin/ewp/contact",
  *   },
  *   field_ui_base_route = "contact.settings"
@@ -98,29 +99,29 @@ class ContactEntity extends ContentEntityBase implements ContactEntityInterface 
 
     $fields['name'] = BaseFieldDefinition::create('string')
       ->setLabel(t('Name'))
-      ->setDescription(t('The name of the Contact entity.'))
+      ->setDescription(t('The internal name of the Contact entity.'))
       ->setSettings([
         'max_length' => 50,
         'text_processing' => 0,
       ])
       ->setDefaultValue('')
       ->setDisplayOptions('view', [
-        'label' => 'above',
+        'label' => 'hidden',
         'type' => 'string',
-        'weight' => -4,
+        'weight' => -20,
       ])
       ->setDisplayOptions('form', [
         'type' => 'string_textfield',
-        'weight' => -4,
+        'weight' => -20,
       ])
       ->setDisplayConfigurable('form', TRUE)
       ->setDisplayConfigurable('view', TRUE)
       ->setRequired(TRUE);
 
-    $fields['status']->setDescription(t('A boolean indicating whether the Contact is published.'))
+    $fields['status']
       ->setDisplayOptions('form', [
         'type' => 'boolean_checkbox',
-        'weight' => -3,
+        'weight' => 20,
       ]);
 
     $fields['created'] = BaseFieldDefinition::create('created')

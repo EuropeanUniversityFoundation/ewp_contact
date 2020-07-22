@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.contact.contact_name
+  module:
+    - ewp_contact
+    - ewp_core
+id: contact.contact.contact_name
+field_name: contact_name
+entity_type: contact
+bundle: contact
+label: 'Contact name'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: ewp_string_lang

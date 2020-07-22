@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.contact.contact_person_given_names
+  module:
+    - ewp_contact
+    - ewp_core
+id: contact.contact.contact_person_given_names
+field_name: contact_person_given_names
+entity_type: contact
+bundle: contact
+label: 'Person given names'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: ewp_string_lang

@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - ewp_contact
+    - ewp_core
+id: contact.contact_person_gender
+field_name: contact_person_gender
+entity_type: contact
+type: gender_code
+settings: {  }
+module: ewp_core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
