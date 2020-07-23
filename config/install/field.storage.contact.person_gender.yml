@@ -4,14 +4,14 @@ dependencies:
   module:
     - ewp_contact
     - ewp_core
-id: contact.contact_role_description
-field_name: contact_role_description
+id: contact.person_gender
+field_name: person_gender
 entity_type: contact
-type: ewp_multiline_lang
+type: gender_code
 settings: {  }
 module: ewp_core
 locked: false
-cardinality: -1
+cardinality: 1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false

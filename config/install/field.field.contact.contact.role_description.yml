@@ -2,18 +2,19 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.contact.contact_street_address
+    - field.storage.contact.role_description
   module:
     - ewp_contact
-id: contact.contact.contact_street_address
-field_name: contact_street_address
+    - ewp_core
+id: contact.contact.role_description
+field_name: role_description
 entity_type: contact
 bundle: contact
-label: 'Street address'
+label: 'Role description'
 description: ''
 required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }
-field_type: ewp_flexible_address
+field_type: ewp_multiline_lang

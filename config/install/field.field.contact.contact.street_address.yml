@@ -2,14 +2,14 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.contact.contact_mailing_address
+    - field.storage.contact.street_address
   module:
     - ewp_contact
-id: contact.contact.contact_mailing_address
-field_name: contact_mailing_address
+id: contact.contact.street_address
+field_name: street_address
 entity_type: contact
 bundle: contact
-label: 'Mailing address'
+label: 'Street address'
 description: ''
 required: false
 translatable: false

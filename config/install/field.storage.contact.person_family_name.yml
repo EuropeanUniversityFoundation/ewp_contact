@@ -3,16 +3,16 @@ status: true
 dependencies:
   module:
     - ewp_contact
-id: contact.contact_mailing_address
-field_name: contact_mailing_address
+    - ewp_core
+id: contact.person_family_name
+field_name: person_family_name
 entity_type: contact
-type: ewp_flexible_address
+type: ewp_string_lang
 settings:
-  max_length_long: '255'
-  max_length_short: '16'
-module: ewp_contact
+  max_length: '255'
+module: ewp_core
 locked: false
-cardinality: 1
+cardinality: -1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false

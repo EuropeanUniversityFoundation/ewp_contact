@@ -2,19 +2,18 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.contact.contact_person_gender
+    - field.storage.contact.phone_number
   module:
     - ewp_contact
-    - ewp_core
-id: contact.contact.contact_person_gender
-field_name: contact_person_gender
+id: contact.contact.phone_number
+field_name: phone_number
 entity_type: contact
 bundle: contact
-label: 'Person gender'
+label: 'Phone number'
 description: ''
 required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }
-field_type: gender_code
+field_type: ewp_phone_number

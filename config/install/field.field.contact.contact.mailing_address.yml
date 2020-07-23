@@ -2,18 +2,18 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.contact.contact_email
+    - field.storage.contact.mailing_address
   module:
     - ewp_contact
-id: contact.contact.contact_email
-field_name: contact_email
+id: contact.contact.mailing_address
+field_name: mailing_address
 entity_type: contact
 bundle: contact
-label: Email
+label: 'Mailing address'
 description: ''
 required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }
-field_type: email
+field_type: ewp_flexible_address

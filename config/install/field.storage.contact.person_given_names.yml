@@ -4,8 +4,8 @@ dependencies:
   module:
     - ewp_contact
     - ewp_core
-id: contact.contact_person_given_names
-field_name: contact_person_given_names
+id: contact.person_given_names
+field_name: person_given_names
 entity_type: contact
 type: ewp_string_lang
 settings:

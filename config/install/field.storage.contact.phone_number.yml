@@ -3,15 +3,14 @@ status: true
 dependencies:
   module:
     - ewp_contact
-    - ewp_core
-id: contact.contact_person_gender
-field_name: contact_person_gender
+id: contact.phone_number
+field_name: phone_number
 entity_type: contact
-type: gender_code
+type: ewp_phone_number
 settings: {  }
-module: ewp_core
+module: ewp_contact
 locked: false
-cardinality: 1
+cardinality: -1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false

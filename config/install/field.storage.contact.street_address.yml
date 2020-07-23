@@ -3,14 +3,16 @@ status: true
 dependencies:
   module:
     - ewp_contact
-id: contact.contact_fax_number
-field_name: contact_fax_number
+id: contact.street_address
+field_name: street_address
 entity_type: contact
-type: ewp_phone_number
-settings: {  }
+type: ewp_flexible_address
+settings:
+  max_length_long: '255'
+  max_length_short: '16'
 module: ewp_contact
 locked: false
-cardinality: -1
+cardinality: 1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false

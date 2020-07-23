@@ -2,14 +2,14 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.contact.contact_phone_number
+    - field.storage.contact.fax_number
   module:
     - ewp_contact
-id: contact.contact.contact_phone_number
-field_name: contact_phone_number
+id: contact.contact.fax_number
+field_name: fax_number
 entity_type: contact
 bundle: contact
-label: 'Phone number'
+label: 'Fax number'
 description: ''
 required: false
 translatable: false

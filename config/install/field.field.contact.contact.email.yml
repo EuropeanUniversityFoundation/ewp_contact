@@ -2,19 +2,18 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.contact.contact_role_description
+    - field.storage.contact.email
   module:
     - ewp_contact
-    - ewp_core
-id: contact.contact.contact_role_description
-field_name: contact_role_description
+id: contact.contact.email
+field_name: email
 entity_type: contact
 bundle: contact
-label: 'Role description'
+label: Email
 description: ''
 required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }
-field_type: ewp_multiline_lang
+field_type: email

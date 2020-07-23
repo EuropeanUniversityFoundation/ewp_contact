@@ -3,8 +3,8 @@ status: true
 dependencies:
   module:
     - ewp_contact
-id: contact.contact_email
-field_name: contact_email
+id: contact.email
+field_name: email
 entity_type: contact
 type: email
 settings: {  }
