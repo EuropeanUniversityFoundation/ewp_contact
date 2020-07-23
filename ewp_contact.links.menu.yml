@@ -1,4 +1,4 @@
-# EWP Contact menu items definition
+# EWP Contact menu parent
 ewp_contact.admin:
   title: 'EWP Contact Type'
   route_name: ewp_contact.admin
@@ -6,16 +6,44 @@ ewp_contact.admin:
   parent: ewp_core.admin
 
 # Contact menu items definition
-contact.admin.structure.settings:
+contact.add_form:
+  title: 'Add Contact'
+  route_name: entity.contact.add_form
+  description: 'Add a new Content entity'
+  parent: ewp_contact.admin
+  weight: -10
+
+contact.settings:
   title: 'Contact settings'
   description: 'Configure Contact entities'
   route_name: contact.settings
   parent: ewp_contact.admin
   weight: 1
 
-entity.contact.collection:
+contact.fields:
+  title: 'Manage fields'
+  description: 'Manage the fields of Contact entities'
+  route_name: entity.contact.field_ui_fields
+  parent: ewp_contact.admin
+  weight: 2
+
+contact.form:
+  title: 'Manage form display'
+  description: 'Manage the form display of Contact entities'
+  route_name: entity.entity_form_display.contact.default
+  parent: ewp_contact.admin
+  weight: 3
+
+contact.display:
+  title: 'Manage display'
+  description: 'Manage the display of Contact entities'
+  route_name: entity.entity_view_display.contact.default
+  parent: ewp_contact.admin
+  weight: 4
+
+contact.collection:
   title: 'Contact list'
   route_name: entity.contact.collection
   description: 'List Contact entities'
   parent: ewp_contact.admin
-  weight: 2
+  weight: 10

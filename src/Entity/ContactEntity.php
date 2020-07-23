@@ -33,7 +33,6 @@ use Drupal\Core\Entity\EntityTypeInterface;
  *     "access" = "Drupal\ewp_contact\ContactEntityAccessControlHandler",
  *   },
  *   base_table = "contact",
- *   data_table = "contact_field_data",
  *   translatable = FALSE,
  *   admin_permission = "administer contact entities",
  *   entity_keys = {
@@ -48,7 +47,7 @@ use Drupal\Core\Entity\EntityTypeInterface;
  *     "add-form" = "/ewp/contact/add",
  *     "edit-form" = "/ewp/contact/{contact}/edit",
  *     "delete-form" = "/ewp/contact/{contact}/delete",
- *     "collection" = "/admin/ewp/contact",
+ *     "collection" = "/admin/ewp/contact/list",
  *   },
  *   field_ui_base_route = "contact.settings"
  * )
