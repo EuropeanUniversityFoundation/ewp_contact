@@ -72,9 +72,12 @@ class FlexibleAddressDefaultFormatter extends FormatterBase {
    *   The textual output generated.
    */
   protected function viewValue(FieldItemInterface $item) {
-    $output = [];
-    $output .= $item['recipient_name'] . '<br />';
-    $output .= $item['country'] . '<br />';
+    $output = '';
+    $properties = $item->getProperties();
+    foreach ($properties as $key => $object) {
+      // if the property has a value, print the label as well
+      $output .= ($object->getValue()) ? $object->getDataDefinition()->getLabel() . ': ' . $object->getValue() . '<br />' : '' ;
+    }
 
     return $output;
   }
