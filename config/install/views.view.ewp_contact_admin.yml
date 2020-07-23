@@ -17,8 +17,8 @@ dependencies:
     - ewp_contact
     - ewp_core
     - user
-id: contact_admin
-label: Contact administration
+id: ewp_contact_admin
+label: EWP Contact administration
 module: views
 description: ''
 tag: ''
