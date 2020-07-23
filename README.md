@@ -2,6 +2,12 @@
 
 Drupal module providing an EWP Contact entity with associated field types.
 
+See the **Erasmus Without Paper** specifications for more information:
+
+  - [EWP Phone Number Types](https://github.com/erasmus-without-paper/ewp-specs-types-phonenumber/tree/v1.0.1)
+  - [EWP Address Data Types](https://github.com/erasmus-without-paper/ewp-specs-types-address/tree/v1.0.1)
+  - [EWP Abstract Contact Type](https://github.com/erasmus-without-paper/ewp-specs-types-contact/tree/v1.1.0)
+
 ## Installation
 
 Include the repository in your project's `composer.json` file:
