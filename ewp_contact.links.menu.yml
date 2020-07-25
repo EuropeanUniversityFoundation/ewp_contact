@@ -2,7 +2,7 @@
 ewp_contact.admin:
   title: 'EWP Contact'
   route_name: ewp_contact.admin
-  description: 'Erasmus Without Paper specifications for Abstract Contacts.'
+  description: 'Settings for EWP Contact'
   parent: ewp_core.admin
 
 # Contact menu items definition

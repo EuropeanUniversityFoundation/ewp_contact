@@ -18,7 +18,7 @@ class ContactEntityListBuilder extends EntityListBuilder {
    */
   public function buildHeader() {
     $header['id'] = $this->t('Contact ID');
-    $header['name'] = $this->t('Name');
+    $header['label'] = $this->t('Label');
     return $header + parent::buildHeader();
   }
 
@@ -28,7 +28,7 @@ class ContactEntityListBuilder extends EntityListBuilder {
   public function buildRow(EntityInterface $entity) {
     /* @var \Drupal\ewp_contact\Entity\ContactEntity $entity */
     $row['id'] = $entity->id();
-    $row['name'] = Link::createFromRoute(
+    $row['label'] = Link::createFromRoute(
       $entity->label(),
       'entity.contact.edit_form',
       ['contact' => $entity->id()]

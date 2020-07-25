@@ -37,7 +37,7 @@ use Drupal\Core\Entity\EntityTypeInterface;
  *   admin_permission = "administer contact entities",
  *   entity_keys = {
  *     "id" = "id",
- *     "label" = "name",
+ *     "label" = "label",
  *     "uuid" = "uuid",
  *     "langcode" = "langcode",
  *     "published" = "status",
@@ -62,14 +62,14 @@ class ContactEntity extends ContentEntityBase implements ContactEntityInterface 
    * {@inheritdoc}
    */
   public function getName() {
-    return $this->get('name')->value;
+    return $this->get('label')->value;
   }
 
   /**
    * {@inheritdoc}
    */
   public function setName($name) {
-    $this->set('name', $name);
+    $this->set('label', $name);
     return $this;
   }
 
@@ -97,9 +97,9 @@ class ContactEntity extends ContentEntityBase implements ContactEntityInterface 
     // Add the published field.
     $fields += static::publishedBaseFieldDefinitions($entity_type);
 
-    $fields['name'] = BaseFieldDefinition::create('string')
-      ->setLabel(t('Name'))
-      ->setDescription(t('The internal name of the Contact entity.'))
+    $fields['label'] = BaseFieldDefinition::create('string')
+      ->setLabel(t('Label'))
+      ->setDescription(t('The internal label of the Contact entity.'))
       ->setSettings([
         'max_length' => 50,
         'text_processing' => 0,

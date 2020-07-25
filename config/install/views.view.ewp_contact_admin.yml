@@ -82,17 +82,17 @@ display:
       row:
         type: fields
       fields:
-        name:
+        label:
           table: contact
-          field: name
-          id: name
+          field: label
+          id: label
           entity_type: null
-          entity_field: name
+          entity_field: label
           plugin_id: field
           relationship: none
           group_type: group
           admin_label: ''
-          label: Name
+          label: Label
           exclude: false
           alter:
             alter_text: false
@@ -831,10 +831,10 @@ display:
             operator_limit_selection: false
             operator_list: {  }
           group: 1
-        name:
-          id: name
+        label:
+          id: label
           table: contact
-          field: name
+          field: label
           relationship: none
           group_type: group
           admin_label: ''
@@ -844,13 +844,13 @@ display:
           exposed: true
           expose:
             operator_id: name_op
-            label: Name
+            label: Label
             description: ''
             use_operator: false
             operator: name_op
             operator_limit_selection: false
             operator_list: {  }
-            identifier: name
+            identifier: label
             required: false
             remember: false
             multiple: false
@@ -872,7 +872,7 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           entity_type: contact
-          entity_field: name
+          entity_field: label
           plugin_id: string
       sorts: {  }
       title: Contacts
