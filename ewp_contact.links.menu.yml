@@ -1,6 +1,6 @@
 # EWP Contact menu parent
 ewp_contact.admin:
-  title: 'EWP Contact Type'
+  title: 'EWP Contact'
   route_name: ewp_contact.admin
   description: 'Erasmus Without Paper specifications for Abstract Contacts.'
   parent: ewp_core.admin
@@ -9,7 +9,7 @@ ewp_contact.admin:
 contact.add_form:
   title: 'Add Contact'
   route_name: entity.contact.add_form
-  description: 'Add a new Content entity'
+  description: 'Add a new Contact entity'
   parent: ewp_contact.admin
   weight: -10
 
