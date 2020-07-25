@@ -49,7 +49,8 @@ use Drupal\Core\Entity\EntityTypeInterface;
  *     "delete-form" = "/ewp/contact/{contact}/delete",
  *     "collection" = "/admin/ewp/contact/list",
  *   },
- *   field_ui_base_route = "contact.settings"
+ *   field_ui_base_route = "contact.settings",
+ *   common_reference_target = TRUE,
  * )
  */
 class ContactEntity extends ContentEntityBase implements ContactEntityInterface {
