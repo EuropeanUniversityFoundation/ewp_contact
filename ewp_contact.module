@@ -37,7 +37,7 @@ function ewp_contact_theme() {
 /**
  * Implements hook_theme_suggestions_HOOK().
  */
-function ewpcontact_theme_suggestions_org(array $variables) {
+function ewp_contact_theme_suggestions_org(array $variables) {
   $suggestions = [];
   $entity = $variables['elements']['#contact'];
   $sanitized_view_mode = strtr($variables['elements']['#view_mode'], '.', '_');
