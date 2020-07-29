@@ -1,5 +1,5 @@
 {
-  "name": "ewp_contact",
+  "name": "euf/ewp_contact",
   "type": "drupal-module",
   "description": "Drupal implementation of the EWP Abstract Contact Type",
   "keywords": [
