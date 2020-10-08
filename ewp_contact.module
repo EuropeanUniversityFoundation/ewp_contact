@@ -26,10 +26,16 @@ function ewp_contact_help($route_name, RouteMatchInterface $route_match) {
 /**
  * Implements hook_theme().
  */
-function ewp_contact_theme() {
+function ewp_contact_theme($existing, $type, $theme, $path) {
   return [
     'ewp_contact' => [
       'render element' => 'children',
+    ],
+    'contact' => [                            // the entity id
+      'path' => $path . '/templates',         // template directory in module or theme
+      'template'  => 'contact',               // defines base template as /contact.html.twig
+      'render element' => 'elements',         // Theme API call to define the container of the entity in the render array
+                                              // The entity will be prefixed with a hash sign as ['elements']['#artwork']
     ],
   ];
 }
@@ -37,7 +43,7 @@ function ewp_contact_theme() {
 /**
  * Implements hook_theme_suggestions_HOOK().
  */
-function ewp_contact_theme_suggestions_org(array $variables) {
+function ewp_contact_theme_suggestions_contact(array $variables) {
   $suggestions = [];
   $entity = $variables['elements']['#contact'];
   $sanitized_view_mode = strtr($variables['elements']['#view_mode'], '.', '_');
@@ -46,4 +52,24 @@ function ewp_contact_theme_suggestions_org(array $variables) {
   $suggestions[] = 'contact__' . $entity->id();
   $suggestions[] = 'contact__' . $entity->id() . '__' . $sanitized_view_mode;
   return $suggestions;
+}
+
+/** @file modules/custom/ewp_contact/templates/contact.html.twig
+ * Prepares variables for templates.
+ * implements hook_preprocess_HOOK()
+ */
+function template_preprocess_contact(&$variables) {
+  // Helpful $content variable for templates.
+  $variables['content'] = [];
+  foreach (\Drupal\Core\Render\Element::children($variables['elements']) as $key) {
+    $variables['content'][$key] = $variables['elements'][$key];
+  }
+  /** @var ContactEntityInterface $entity */
+  $entity = $variables['elements']['#contact'];
+  //provide the label
+  $variables['label'] = $entity->label();
+  //provide the alias
+  $variables['url'] = $entity->toUrl()->toString();
+  //provide the view mode
+  $variables['view_mode'] = $variables['elements']['#view_mode'];
 }

@@ -15,7 +15,14 @@
  * @ingroup themeable
  */
 #}
-<div{{ attributes.addClass('contact') }}>
+{%
+  set classes = [
+    'contact',
+    view_mode ? 'contact--view-mode-' ~ view_mode|clean_class,
+    'clearfix',
+  ]
+%}
+<div{{ attributes.addClass(classes) }}>
   {% if content %}
     {{- content -}}
   {% endif %}
