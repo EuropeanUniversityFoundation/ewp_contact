@@ -6,6 +6,7 @@
  */
 
 use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Render\Element;
 use Drupal\Core\Entity\EntityTypeInterface;
 use Drupal\Core\Session\AccountInterface;
 use Drupal\Core\Access\AccessResult;
@@ -57,14 +58,20 @@ function ewp_contact_theme_suggestions_contact(array $variables) {
   return $suggestions;
 }
 
-/** @file modules/custom/ewp_contact/templates/contact.html.twig
- * Prepares variables for templates.
- * implements hook_preprocess_HOOK()
+/**
+ * Prepares variables for Contact templates.
+ *
+ * Default template: contact.html.twig.
+ *
+ * @param array $variables
+ *   An associative array containing:
+ *   - elements: An associative array containing the user information and any
+ *   - attributes: HTML attributes for the containing element.
  */
-function template_preprocess_contact(&$variables) {
+function template_preprocess_contact(array &$variables) {
   // Helpful $content variable for templates.
   $variables['content'] = [];
-  foreach (\Drupal\Core\Render\Element::children($variables['elements']) as $key) {
+  foreach (Element::children($variables['elements']) as $key) {
     $variables['content'][$key] = $variables['elements'][$key];
   }
   /** @var ContactEntityInterface $entity */
