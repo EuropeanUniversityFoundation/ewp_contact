@@ -101,7 +101,7 @@ class ContactEntity extends ContentEntityBase implements ContactEntityInterface 
       ->setLabel(t('Label'))
       ->setDescription(t('The internal label of the Contact entity.'))
       ->setSettings([
-        'max_length' => 50,
+        'max_length' => 255,
         'text_processing' => 0,
       ])
       ->setDefaultValue('')

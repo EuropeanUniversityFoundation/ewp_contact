@@ -1,0 +1,42 @@
+<?php
+
+use Drupal\Core\Field\BaseFieldDefinition;
+
+/**
+ * Increase the max length of the entity label to 255 characters.
+ */
+function ewp_contact_update_8101() {
+  $field_spec = [
+    'type' => 'varchar',
+    'length' => '255',
+    'not null' => TRUE,
+  ];
+  \Drupal::database()->schema()->changeField('contact','label', 'label', $field_spec);
+
+  // Here we copy base field definition from node entity class,
+  // modify it according to our needs and reinstall
+  // modified field definition.
+  $definition = BaseFieldDefinition::create('string')
+    ->setLabel(t('Label'))
+    ->setDescription(t('The internal label of the Contact entity.'))
+    ->setSettings([
+      'max_length' => 255,
+      'text_processing' => 0,
+    ])
+    ->setDefaultValue('')
+    ->setDisplayOptions('view', [
+      'label' => 'hidden',
+      'type' => 'string',
+      'weight' => -20,
+    ])
+    ->setDisplayOptions('form', [
+      'type' => 'string_textfield',
+      'weight' => -20,
+    ])
+    ->setDisplayConfigurable('form', TRUE)
+    ->setDisplayConfigurable('view', TRUE)
+    ->setRequired(TRUE);
+
+  \Drupal::entityDefinitionUpdateManager()
+    ->installFieldStorageDefinition('label', 'contact', 'contact', $definition);
+}
