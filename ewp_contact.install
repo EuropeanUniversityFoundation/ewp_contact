@@ -11,11 +11,8 @@ function ewp_contact_update_8101() {
     'length' => '255',
     'not null' => TRUE,
   ];
-  \Drupal::database()->schema()->changeField('contact','label', 'label', $field_spec);
+  \Drupal::database()->schema()->changeField('contact', 'label', 'label', $field_spec);
 
-  // Here we copy base field definition from node entity class,
-  // modify it according to our needs and reinstall
-  // modified field definition.
   $definition = BaseFieldDefinition::create('string')
     ->setLabel(t('Label'))
     ->setDescription(t('The internal label of the Contact entity.'))
