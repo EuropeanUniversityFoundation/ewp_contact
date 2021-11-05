@@ -17,6 +17,9 @@ dependencies:
     - ewp_flexible_address
     - ewp_phone_number
     - ewp_core
+  enforced:
+    module:
+      - ewp_contact
 id: contact.contact.default
 targetEntityType: contact
 bundle: contact

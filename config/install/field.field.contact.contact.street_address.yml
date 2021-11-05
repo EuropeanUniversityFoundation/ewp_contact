@@ -5,6 +5,9 @@ dependencies:
     - field.storage.contact.street_address
   module:
     - ewp_contact
+  enforced:
+    module:
+      - ewp_contact
 id: contact.contact.street_address
 field_name: street_address
 entity_type: contact

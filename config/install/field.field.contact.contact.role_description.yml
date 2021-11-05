@@ -6,6 +6,9 @@ dependencies:
   module:
     - ewp_contact
     - ewp_core
+  enforced:
+    module:
+      - ewp_contact
 id: contact.contact.role_description
 field_name: role_description
 entity_type: contact

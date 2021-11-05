@@ -6,6 +6,9 @@ dependencies:
   module:
     - ewp_contact
     - ewp_core
+  enforced:
+    module:
+      - ewp_contact
 id: contact.contact.person_gender
 field_name: person_gender
 entity_type: contact

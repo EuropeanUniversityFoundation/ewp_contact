@@ -5,6 +5,9 @@ dependencies:
     - field.storage.contact.email
   module:
     - ewp_contact
+  enforced:
+    module:
+      - ewp_contact
 id: contact.contact.email
 field_name: email
 entity_type: contact

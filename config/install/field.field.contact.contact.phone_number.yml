@@ -5,6 +5,9 @@ dependencies:
     - field.storage.contact.phone_number
   module:
     - ewp_contact
+  enforced:
+    module:
+      - ewp_contact
 id: contact.contact.phone_number
 field_name: phone_number
 entity_type: contact

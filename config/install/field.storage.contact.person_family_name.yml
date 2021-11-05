@@ -4,6 +4,9 @@ dependencies:
   module:
     - ewp_contact
     - ewp_core
+  enforced:
+    module:
+      - ewp_contact
 id: contact.person_family_name
 field_name: person_family_name
 entity_type: contact

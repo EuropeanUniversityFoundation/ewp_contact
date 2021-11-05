@@ -17,6 +17,9 @@ dependencies:
     - ewp_contact
     - ewp_core
     - user
+  enforced:
+    module:
+      - ewp_contact
 id: ewp_contact_admin
 label: EWP Contact administration
 module: views
