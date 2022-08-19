@@ -32,9 +32,6 @@ function ewp_contact_help($route_name, RouteMatchInterface $route_match) {
  */
 function ewp_contact_theme($existing, $type, $theme, $path) {
   return [
-    'ewp_contact' => [
-      'render element' => 'children',
-    ],
     'contact' => [                            // the entity id
       'path' => $path . '/templates',         // template directory in module or theme
       'template'  => 'contact',               // defines base template as /contact.html.twig

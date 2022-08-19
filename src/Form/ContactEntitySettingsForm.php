@@ -19,7 +19,7 @@ class ContactEntitySettingsForm extends FormBase {
    *   The unique string identifying the form.
    */
   public function getFormId() {
-    return 'contactentity_settings';
+    return 'ewp_contact_settings_form';
   }
 
   /**
@@ -46,7 +46,11 @@ class ContactEntitySettingsForm extends FormBase {
    *   Form definition array.
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
-    $form['contactentity_settings']['#markup'] = 'Settings form for Contact entities. Manage field settings here.';
+    $form['placeholder'] = [
+      '#type' => 'item',
+      '#markup' => $this->t('No settings currently available.'),
+    ];
+
     return $form;
   }
 
