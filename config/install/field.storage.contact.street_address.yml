@@ -11,8 +11,8 @@ field_name: street_address
 entity_type: contact
 type: ewp_flexible_address
 settings:
-  max_length_long: '255'
-  max_length_short: '16'
+  max_length_long: 255
+  max_length_short: 16
 module: ewp_contact
 locked: false
 cardinality: 1

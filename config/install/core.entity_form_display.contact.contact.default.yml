@@ -90,7 +90,7 @@ content:
   role_description:
     weight: -10
     settings:
-      rows: '5'
+      rows: 5
       placeholder: ''
     third_party_settings: {  }
     type: ewp_multiline_lang_default
