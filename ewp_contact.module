@@ -32,11 +32,10 @@ function ewp_contact_help($route_name, RouteMatchInterface $route_match) {
  */
 function ewp_contact_theme($existing, $type, $theme, $path) {
   return [
-    'contact' => [                            // the entity id
-      'path' => $path . '/templates',         // template directory in module or theme
-      'template'  => 'contact',               // defines base template as /contact.html.twig
-      'render element' => 'elements',         // Theme API call to define the container of the entity in the render array
-                                              // The entity will be prefixed with a hash sign as ['elements']['#artwork']
+    'contact' => [
+      'path' => $path . '/templates',
+      'template'  => 'contact',
+      'render element' => 'elements',
     ],
   ];
 }
@@ -73,11 +72,11 @@ function template_preprocess_contact(array &$variables) {
   }
   /** @var ContactEntityInterface $entity */
   $entity = $variables['elements']['#contact'];
-  //provide the label
+  // provide the label
   $variables['label'] = $entity->label();
-  //provide the alias
+  // provide the alias
   $variables['url'] = $entity->toUrl()->toString();
-  //provide the view mode
+  // provide the view mode
   $variables['view_mode'] = $variables['elements']['#view_mode'];
 }
 
@@ -86,7 +85,7 @@ function template_preprocess_contact(array &$variables) {
  */
 function ewp_contact_jsonapi_entity_filter_access(EntityTypeInterface $entity_type, AccountInterface $account) {
   return ([
-    JSONAPI_FILTER_AMONG_ALL => AccessResult::allowed()
+    JSONAPI_FILTER_AMONG_ALL => AccessResult::allowed(),
   ]);
 }
 
@@ -97,6 +96,6 @@ function ewp_contact_jsonapi_contact_filter_access(EntityTypeInterface $entity_t
   return ([
     JSONAPI_FILTER_AMONG_ALL => AccessResult::allowedIfHasPermission($account, 'view unpublished contact entities'),
     JSONAPI_FILTER_AMONG_PUBLISHED => AccessResult::allowedIfHasPermission($account, 'view published contact entities'),
-    JSONAPI_FILTER_AMONG_OWN => AccessResult::allowedIfHasPermission($account, 'view published contact entities')
+    JSONAPI_FILTER_AMONG_OWN => AccessResult::allowedIfHasPermission($account, 'view published contact entities'),
   ]);
 }

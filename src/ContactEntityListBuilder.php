@@ -26,7 +26,7 @@ class ContactEntityListBuilder extends EntityListBuilder {
    * {@inheritdoc}
    */
   public function buildRow(EntityInterface $entity) {
-    /* @var \Drupal\ewp_contact\Entity\ContactEntity $entity */
+    /** @var \Drupal\ewp_contact\Entity\ContactEntity $entity */
     $row['id'] = $entity->id();
     $row['label'] = Link::createFromRoute(
       $entity->label(),

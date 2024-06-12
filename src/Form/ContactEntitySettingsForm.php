@@ -6,7 +6,7 @@ use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 
 /**
- * Class ContactEntitySettingsForm.
+ * Settings form for the Contact entity.
  *
  * @ingroup ewp_contact
  */

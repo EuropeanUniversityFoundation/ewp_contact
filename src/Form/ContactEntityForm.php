@@ -34,7 +34,7 @@ class ContactEntityForm extends ContentEntityForm {
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
-    /* @var \Drupal\ewp_contact\Entity\ContactEntity $entity */
+    /** @var \Drupal\ewp_contact\Entity\ContactEntity $entity */
     $form = parent::buildForm($form, $form_state);
 
     return $form;

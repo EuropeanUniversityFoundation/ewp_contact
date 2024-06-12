@@ -118,6 +118,7 @@ class ContactEntity extends ContentEntityBase implements ContactEntityInterface 
       ->setDisplayConfigurable('view', TRUE)
       ->setRequired(TRUE);
 
+    /** @disregard P1013 */
     $fields['status']
       ->setDisplayOptions('form', [
         'type' => 'boolean_checkbox',
