@@ -70,7 +70,7 @@ function template_preprocess_contact(array &$variables) {
   foreach (Element::children($variables['elements']) as $key) {
     $variables['content'][$key] = $variables['elements'][$key];
   }
-  /** @var ContactEntityInterface $entity */
+  /** @var Drupal\ewp_contact\Entity\ContactEntityInterface $entity */
   $entity = $variables['elements']['#contact'];
   // provide the label
   $variables['label'] = $entity->label();

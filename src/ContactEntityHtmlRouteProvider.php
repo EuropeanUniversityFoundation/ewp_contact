@@ -51,6 +51,8 @@ class ContactEntityHtmlRouteProvider extends AdminHtmlRouteProvider {
 
       return $route;
     }
+
+    return NULL;
   }
 
 }
